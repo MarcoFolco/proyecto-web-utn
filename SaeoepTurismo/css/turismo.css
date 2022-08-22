@@ -141,6 +141,22 @@ main section.main-info div .col img {
     border-radius: 45%;
 }
 
+main section.main-info div .col:nth-child(even) img {
+    animation: breathe-img 2s ease-in-out 1s infinite;
+}
+
+main section.main-info div .col:nth-child(odd) img {
+    animation: breathe-img 2s ease-in-out 2s infinite;
+}
+
+main section.main-info div.home-gallery .col:nth-child(even) {
+    animation: breathe 2s ease-in-out 1s infinite;
+}
+
+main section.main-info div.home-gallery .col:nth-child(odd) {
+    animation: breathe 2s ease-in-out 2s infinite;
+}
+
 main section.main-info div.home-gallery .col:hover img {
     filter: blur(5px);
 }
@@ -245,5 +261,20 @@ footer p {
     }
     main section.main-info div.discounts .col:not(.discounts-title) p {
         border-radius: 3rem;
+    }
+    main section.main-info div.cruisers .col img {
+        height: 200px;
+    }
+}
+
+@keyframes breathe {
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes breathe-img {
+    50% {
+        box-shadow: 0px 8px 5px 0 rgba(0,0,0,0.4);
     }
 }
