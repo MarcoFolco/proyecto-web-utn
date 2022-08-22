@@ -39,6 +39,17 @@ header section.header-title {
     width: 90px;
 }
 
+#logo-nosotros {
+    box-shadow: 0px 8px 15px 4px rgba(0,0,0,0.5);
+    border-radius: 45%;
+}
+
+#logo-contactenos {
+    width: 48px;
+    box-shadow: 0px 8px 15px 4px rgba(0,0,0,0.5);
+    border-radius: 45%;
+}
+
 header h1 {
     color: white;
     font-size: 4rem;
@@ -107,9 +118,10 @@ main {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-main::after {
+main.bg-active::after {
     content: "";
     background: url(../img/main-bg.jpg) center;
+    background-size: cover;
     top: 1.5rem;
     left: 1.5rem;
     bottom: 1.5rem;
@@ -118,13 +130,15 @@ main::after {
     opacity: 0.8;
     position: absolute;
     z-index: -1;
+    box-shadow: 0px 7px 10px 4px rgba(0,0,0,0.9);
 }
 
-main section.main-info div.home-gallery .col img {
+main section.main-info div .col img {
     width: 100%;
     height: 275px;
     transition: filter 1s;
     box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.4);
+    border-radius: 45%;
 }
 
 main section.main-info div.home-gallery .col:hover img {
@@ -152,6 +166,62 @@ main section.main-info div.home-gallery .col:hover p {
     opacity: 1;
 }
 
+main section.main-info div.travels div::after, main section.main-info div.discounts div:not(.discounts-title)::after {
+    content: "";
+    background: url(../img/main-bg.jpg) center;
+    top: 0;
+    left: 0.8rem;
+    bottom: 0;
+    right: 0.8rem;
+    border-radius: 12px;
+    opacity: 0.8;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0px 7px 10px 4px rgba(0,0,0,0.9);
+}
+
+main section.main-info div.travels p.travel-title span, main section.main-info div.travels p.travel-price span, main section.main-info div.discounts .col.discounts-title p span  {
+    background-color: rgba(76, 99, 122, 0.185);
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.4);
+}
+
+main section.main-info div.cruisers .col img {
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+    height: 325px;
+    border-radius: 40%;
+}
+
+main section.main-info div.discounts .col p {
+   width: 32.5%;
+   padding: 0 17px;
+}
+
+main section.main-info div.discounts .col:not(.discounts-title) p {
+    border-radius: 50rem;
+    border-left: 3px double rgba(255, 255, 255, 0.521);
+    border-right: 3px double rgba(255, 255, 255, 0.521);
+    background-color: rgba(76, 99, 122, 0.185);
+    box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section.form-contact form button[type="submit"] {
+    background-color: rgba(0, 46, 250, 0.15);
+    box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.4);
+}
+
+main section.other-contact p i {
+    background-color: rgba(69, 74, 99, 0.15);
+    box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.4);
+    border-radius: 50%;
+    padding: 8px;
+}
+
 footer {
     background-color: #113450;
     background-color: rgba(17, 52, 80, 0.6);
@@ -172,5 +242,8 @@ footer p {
     }
     main section.main-info div.home-gallery .col p {
         font-size: 2.6rem;
+    }
+    main section.main-info div.discounts .col:not(.discounts-title) p {
+        border-radius: 3rem;
     }
 }
